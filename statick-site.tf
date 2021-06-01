@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "bucketfortesting" {
     error_document = "error.html"
   }
 }  
-resource "aws_s3_bucket_object" "object" {
+resource "aws_s3_bucket_object" "index" {
   bucket = aws_s3_bucket.bucketfortesting.id
   key    = "index.html"
   source = "index.html"
