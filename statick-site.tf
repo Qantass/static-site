@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "bucketfortesting" {
   acl    = "public-read"
   website {
     index_document = "index.html"
-    error_document = "error.html"
+    #error_document = "error.html"
   }
 }  
 resource "aws_s3_bucket_object" "index" {
@@ -16,4 +16,5 @@ resource "aws_s3_bucket_object" "index" {
   key    = "index.html"
   source = "index.html"
   content_type = "text/html"
+  acl    = "public-read"
 }
